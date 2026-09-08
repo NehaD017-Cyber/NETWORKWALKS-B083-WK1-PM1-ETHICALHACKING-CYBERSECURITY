@@ -164,12 +164,12 @@ DNS:
 
 **Problem2:** How to take screenshot in Kali Linux?
 
-**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the screenshot in the folder.
+**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the                     screenshot in the folder.
 
 
 **Problem3:** How to bring the screenshot in your PC file explorer?
 
-**Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after uploading it click on the share button and get the screenshot by the link or email.
+**Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after               uploading it click on the share button and get the screenshot by the link or email.
 
 ## 📝 What I Learned
 
