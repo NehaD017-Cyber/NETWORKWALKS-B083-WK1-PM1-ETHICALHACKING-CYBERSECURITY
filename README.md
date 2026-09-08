@@ -118,7 +118,8 @@ Adapter Type: Intel PRO/1000 MT Desktop
    ping -c 4 8.8.8.8
    ping -c 4 google.com
    ```
-   <img width="1916" height="1010" alt="kali 3" src="https://github.com/user-attachments/assets/cd73fea6-df89-462f-883b-a76ae4a57823" />
+   <img width="1916" height="1010" alt="kali 3" src="https://github.com/user-attachments/assets/579309a5-85ac-4cf3-92fc-e4898287e044" />
+
 
 7. **Create a Clean VM Snapshot**
 
