@@ -89,15 +89,10 @@ Attached to: NAT Network
 Network:     NatNetwork
 Adapter Type: Intel PRO/1000 MT Desktop
 ```
-
-5. **Connecting the Kali Linux Network**
-
-   Attaching the VM to NAT Network in VirtualBox settings.
-
-  <img width="640" height="377" alt="Screenshot 2026-09-08 172947" src="https://github.com/user-attachments/assets/b9f780ad-98dc-4885-a62a-ce2661a1f18e" />
+<img width="640" height="377" alt="Screenshot 2026-09-07 212746" src="https://github.com/user-attachments/assets/88bb3950-1813-43aa-ab76-ba9ba2faad5d" />
 
 
-6. **Configure Static IP on Kali Linux and DNS Connectivity**
+5. **Configure Static IP on Kali Linux and DNS Connectivity**
 
     Configure IP on the Kali:
     
@@ -115,7 +110,7 @@ Adapter Type: Intel PRO/1000 MT Desktop
    <img width="640" height="377" alt="Screenshot 2026-09-08 141253" src="https://github.com/user-attachments/assets/3f097190-42d4-4e36-ab92-182799fd5590" />
 
 
-7. **Verify Network Connectivity**
+6. **Verify Network Connectivity**
 
     Open the terminal inside Kali Linux and run:
 
@@ -125,7 +120,7 @@ Adapter Type: Intel PRO/1000 MT Desktop
    ```
    <img width="1916" height="1010" alt="kali 3" src="https://github.com/user-attachments/assets/cd73fea6-df89-462f-883b-a76ae4a57823" />
 
-8. **Create a Clean VM Snapshot**
+7. **Create a Clean VM Snapshot**
 
 After completing the initial network configuration and verification, a baseline VirtualBox snapshot was created.
 
@@ -163,12 +158,12 @@ DNS:
 
 **Problem1:** Do we have to enable IPv6 while attacking the Virtual Boc to NAT Network?
 
-**Solution:** NO, we don't have to enable IPv6, only enable IPv4 and check DHCP
+**Solution:** NO, we don't have to enable IPv6, only enable IPv4 and check DHCP.
 
 
 **Problem2:** How to take screenshot in Kali Linux?
 
-**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the screenshot in the folder
+**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the screenshot in the folder.
 
 
 **Problem3:** How to bring the screenshot in your PC file explorer?
@@ -185,15 +180,15 @@ DNS:
   
   I learned how to configure IP addresses, DNS Connectivity and Gateways.
 
-- **Screenshots in Virtual Machine**
+- **Screenshots in Virtual Machine:**
     
-    I was stuck for too long in this, but now I know how to take screenshots in VM
+    I was stuck for too long in this, but now I know how to take screenshots in VM.
 
 - **Snapshots:**
   
  Saved a baseline state right after setting up Kali so I can reset the VM anytime.
 
-- **Documentation**
+- **Documentation:**
   
   I learned how to do the documentation of my projects, tasks and set the environment of the lab for future tasks.
 
