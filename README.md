@@ -174,7 +174,7 @@ DNS:
 
 - **Virtual Machine Networking:**
   
-   I learned that using NAT Network in VM will help the machines in the lab communicate safely.
+  I learned that using NAT Network in VM will help the machines in the lab communicate safely.
 
 - **Static IP configuration:**
   
@@ -182,11 +182,11 @@ DNS:
 
 - **Screenshots in Virtual Machine:**
     
-    I was stuck for too long in this, but now I know how to take screenshots in VM.
+  I was stuck for too long in this, but now I know how to take screenshots in VM.
 
 - **Snapshots:**
   
- Saved a baseline state right after setting up Kali so I can reset the VM anytime.
+  Saved a baseline state right after setting up Kali so I can reset the VM anytime.
 
 - **Documentation:**
   
