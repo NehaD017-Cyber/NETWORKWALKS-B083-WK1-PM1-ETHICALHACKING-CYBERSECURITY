@@ -63,10 +63,10 @@ The primary aim of this project is to create a secure and isolated setup where c
    
    Download and install VirtualBox on the host operating system.
    
-   Download VirtualBox: https://virtualbox .org/wiki/Downloads
+   Download VirtualBox: https://virtualbox.org/wiki/Downloads
    
 
-3. **Create NATNetwork**
+3. **Create NAT Network**
    
    Configure the network settings on your Virtualbox
    (create NATNetwork in 10.0.0.0/24)
@@ -106,9 +106,11 @@ Adapter Type: Intel PRO/1000 MT Desktop
 
    Open terminal in the Kali Linux and run the following commands:
    
-   For Internet connectivity issue: sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
-   To deactivate network profile: sudo nmcli connection down Wired\ connection\ 1
-   To reactivate network profile: sudo nmcli connection up Wired\ connection\ 1
+   *For Internet connectivity issue:* ```bash sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0 ```
+   
+   *To deactivate network profile:* ``` bash sudo nmcli connection down Wired\ connection\ 1```
+   
+   *To reactivate network profile:* ```bash sudo nmcli connection up Wired\ connection\ 1```
    
    <img width="640" height="377" alt="Screenshot 2026-09-08 141253" src="https://github.com/user-attachments/assets/3f097190-42d4-4e36-ab92-182799fd5590" />
 
@@ -146,7 +148,7 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 | 🧰 Verify Nmap | `nmap --version` | Nmap version displayed |
 | 🔄 Verify snapshot | Restore snapshot and run `ip a` | Baseline configuration restored |
 
-**Example Results**
+**Example Results:**
 
 IP Address:
 10.0.0.2/24
@@ -160,12 +162,17 @@ DNS:
 ## 🐞 One Problems Encountered & Solved
 
 **Problem1:** Do we have to enable IPv6 while attacking the Virtual Boc to NAT Network?
+
 **Solution:** NO, we don't have to enable IPv6, only enable IPv4 and check DHCP
 
+
 **Problem2:** How to take screenshot in Kali Linux?
+
 **Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the screenshot in the folder
 
+
 **Problem3:** How to bring the screenshot in your PC file explorer?
+
 **Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after uploading it click on the share button and get the screenshot by the link or email.
 
 ## 📝 What I Learned
@@ -178,7 +185,7 @@ DNS:
   
   I learned how to configure IP addresses, DNS Connectivity and Gateways.
 
-  - **Screenshots in Virtual Machine**
+- **Screenshots in Virtual Machine**
     
     I was stuck for too long in this, but now I know how to take screenshots in VM
 
@@ -195,12 +202,14 @@ DNS:
 
 ## 🔭 Tools and Resources
   1. To install 7-Zip: https://7-zip.org/download.html
-  2. To install VirtualBox Machine: https://virtualbox .org/wiki/Downloads
+  2. To install VirtualBox Machine: https://virtualbox.org/wiki/Downloads
   3. To install Kali Linux: https://kali.org/get-kali
 
 ## 👤 Author
    Neha
+   
    Cybersecurity Intern B083
+
 
    LinkedIn: https://www.linkedin.com/in/neha-d-846342-nd
 
