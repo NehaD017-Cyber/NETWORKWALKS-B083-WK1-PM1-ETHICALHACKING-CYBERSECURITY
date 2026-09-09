@@ -116,7 +116,8 @@ Adapter Type: Intel PRO/1000 MT Desktop
    ```
    <img width="1916" height="1010" alt="kali 3" src="https://github.com/user-attachments/assets/579309a5-85ac-4cf3-92fc-e4898287e044" />
 
-
+  Verifying Results: Both 8.8.8.8 (gateway) and ```google.com``` (DNS) successfully returned 0% packet loss, confirming full outbound network connectivity.
+  
 7. **Create a Clean VM Snapshot**
 
 After completing the initial network configuration and verification, a baseline VirtualBox snapshot was created.
@@ -129,6 +130,8 @@ The snapshot captures the fully configured state of the laboratory environment.
 
 If a future exercise changes system files, breaks networking, or degrades the VM state, the machine can be restored immediately to this clean baseline.
 
+---
+
 ## 🧪 Lab Tests
 
 | ✅ Test | 📃 Command | 🎯 Expected Result |
@@ -139,6 +142,8 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 | 🔎 Test DNS resolution | `nslookup google.com` | Domain resolves |
 | 🧰 Verify Nmap | `nmap --version` | Nmap version displayed |
 | 🔄 Verify snapshot | Restore snapshot and run `ip a` | Baseline configuration restored |
+
+---
 
 ## 🐞 One Problems Encountered & Solved
 
@@ -155,6 +160,8 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 **Problem3:** How to bring the screenshot in your PC file explorer?
 
 **Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after uploading it click on the share button and get the screenshot by the link or email.
+
+---
 
 ## 📝 What I Learned
 
@@ -188,15 +195,21 @@ If a future exercise changes system files, breaks networking, or degrades the VM
   
 * **Lab Security:** Enforced privacy best practices by isolating test targets and abstracting network configurations.
 
+---
+
 ## 🔐 Security & Ethical Issue
    This laboratory is completely for educational purpose only.
 
    No target-specific credentials, confidential information, patient records, private infrastructure details, or sensitive assessment evidence are included in this repository.
 
+---
+
 ## 🔭 Tools and Resources
   1. To install 7-Zip: https://7-zip.org/download.html
   2. To install VirtualBox Machine: https://virtualbox.org/wiki/Downloads
   3. To install Kali Linux: https://kali.org/get-kali
+
+---
 
 ## 👤 Author
    Neha
@@ -205,6 +218,8 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 
 
    LinkedIn: https://www.linkedin.com/in/neha-d-846342-nd
+
+---
 
   ## 📌 Project Information
 
