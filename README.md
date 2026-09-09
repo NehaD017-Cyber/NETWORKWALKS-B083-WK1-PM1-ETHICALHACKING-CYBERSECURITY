@@ -178,6 +178,16 @@ If a future exercise changes system files, breaks networking, or degrades the VM
   
   I learned how to do the documentation of my projects, tasks and set the environment of the lab for future tasks.
 
+---
+
+## 🎯 Key Takeaways & Findings
+
+* **Network Integrity:** Verified host-to-gateway routing and DNS translation on Kali Linux (`10.0.0.0/24`).
+  
+* **Tool Proficiency:** Successfully performed host discovery, port scanning, and service enumeration using native CLI utilities (`ping`, `nc`, `nmap`).
+  
+* **Lab Security:** Enforced privacy best practices by isolating test targets and abstracting network configurations.
+
 ## 🔐 Security & Ethical Issue
    This laboratory is completely for educational purpose only.
 
