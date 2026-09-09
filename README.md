@@ -26,19 +26,6 @@ Isolated virtual lab environment built with VirtualBox and Kali Linux for cybers
 ## Executive Summary
 This project demonstrates end-to-end network reconnaissance and vulnerability assessments using Kali Linux and Nmap within an authorized testing environment.
 
-## Lab Architecture & Topology
-- **Attacker Machine:** Kali Linux 2026.x
-- **Target Network:** 192.168.x.x / Host-Only Isolated Network
-- **Tools Used:** Nmap, Wireshark, Bash
-
-## Phase 1: Network Reconnaissance & Commands Executed
-```bash
-# Host Discovery
-nmap -sn 10.0.2.0/24
-
-# Detailed Service & OS Scanning
-nmap -sV -sC -O -p- 10.0.2.0
-```
 ---
 
 ## 📌 Project Overview
@@ -55,7 +42,6 @@ The primary aim of this project is to create a secure and isolated setup where c
 * Set NAT Network in the Kali Linux.
 * Assign a consistent IP address to the Kali VM.
 * Verify network connectivity and DNS resolution.
-* Perform Network Reconnaissance (Nmaps scans + Terminal proofs)
 * Take snapshot to recover if needed.
 * Document the complete setup and prepare the environment for future tasks.
 ---
@@ -139,28 +125,7 @@ Adapter Type: Intel PRO/1000 MT Desktop
 
   Verifying Results: Both 8.8.8.8 (gateway) and ```google.com``` (DNS) successfully returned 0% packet loss, confirming full outbound network connectivity.
   
-7. **Perform Network Reconnaissance**
- Executed Nmap reconnaissance inside the isolated lab environment in the terminal of kali linux:
-
-```bash
-# Basic Ping Sweep / Target Discovery
-nmap -sn 192.168.x.x/24
-
-# Service & Version Scan
-nmap -sV 192.168.x.x
-```
-<img width="488" height="229" alt="Screenshot 2026-09-09 133050" src="https://github.com/user-attachments/assets/2ff422ba-17fe-48c6-ad34-2cd049af9267" />
-
-#### Terminal Proof of Execution
-
-![Nmap Scan Terminal Output](images/nmap-proof.jpg)
-
-**Analysis of Execution Results:**
-- **Host Discovery (`nmap -sn 10.0.2.0/24`):** Successfully discovered 3 active hosts on the subnet (`10.0.2.1`, `10.0.2.2`, and `10.0.2.3`).
-  
-- **Service Scanning (`nmap -sV 10.0.2.0`):** Demonstrated that network subnet IDs (`.0`) do not respond to direct service scans, confirming active host IP selection is required for targeted enumeration.
-
-8. **Create a Clean VM Snapshot**
+7. **Create a Clean VM Snapshot**
 
 After completing the initial network configuration and verification, a baseline VirtualBox snapshot was created.
 
@@ -174,16 +139,67 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 
 ---
 
-## 🧪 Lab Tests
+## 💻 Lab capabilities and purpose of the foundational domains
 
-| ✅ Test | 📃 Command | 🎯 Expected Result |
-| :--- | :--- | :--- |
-| 🌐 Check IP address | `ip a` | Correct Kali IP displayed |
-| 📡 Test gateway | `ping 10.0.0.1` | Successful replies |
-| 🌍 Test Internet connectivity | `ping 8.8.8.8` | Successful replies |
-| 🔎 Test DNS resolution | `nslookup google.com` | Domain resolves |
-| 🧰 Verify Nmap | `nmap --version` | Nmap version displayed |
-| 🔄 Verify snapshot | Restore snapshot and run `ip a` | Baseline configuration restored |
+### 1. Network Reconnaissance
+
+* **Objective:** Discover active devices, live host IP addresses, and gateway configurations across the local virtual network subnet.
+
+* **Key Command:** `nmap -sn 10.0.0.0/24`
+  
+* **Findings:** Identified active primary local interfaces (`10.0.0.2` and `10.0.2.3`) and confirmed active local host connectivity.
+
+<img width="510" height="275" alt="Screenshot 2026-09-09 143621" src="https://github.com/user-attachments/assets/2cc0433c-e3ee-4637-b08e-ab3d399b5553" />
+
+
+### 2. Port Scanning & Service Enumeration
+
+* **Objective:** Probe open TCP/UDP ports and identify software service versions running on target host interfaces.
+
+* **Key Command:** `nmap -sV 127.0.0.1`
+  
+* **Findings:** Scanned 1,000 standard TCP ports; verified that no unnecessary background services or open ports are exposed to the network.
+
+<img width="511" height="290" alt="Screenshot 2026-09-09 143557" src="https://github.com/user-attachments/assets/586a473a-d677-4dcf-ae3c-7fa2b9d08152" />
+
+### 3. Vulnerability Assessment
+
+* **Objective:** Automated scanning of identified open ports and software versions for known security vulnerabilities and CVE misconfigurations.
+
+* **Key Command:** `nmap --script vuln 127.0.0.1`
+  
+* **Findings:** Automated vulnerability checks completed in 0.18 seconds with zero vulnerabilities detected, confirming a hardened security baseline.
+
+<img width="511" height="288" alt="Screenshot 2026-09-09 143652" src="https://github.com/user-attachments/assets/f16e08b1-0375-4252-a9f2-b336b677fc26" />
+
+### 4. Packet Analysis
+
+* **Objective:** Inspect live network traffic flow, measure network latency, and verify ICMP packet transmission efficiency.
+  
+* **Key Command:** `ping -c 4 127.0.0.1`
+  
+* **Findings:** Transmitted 4 ICMP packets with 0% packet loss and `<0.1ms` latency, confirming proper network interface behavior.
+   
+   <img width="511" height="290" alt="Screenshot 2026-09-09 143715" src="https://github.com/user-attachments/assets/40421a60-7cdb-4870-99a0-f4e7a16ff0b2" />
+
+---
+
+   ## 🧪 Lab Tests
+
+### Security Tool & Network Experimentation Matrix
+
+| Phase / Module | Security Tool / Command | Command Executed | Purpose & Experiment Scope | Verified Result |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Network Interface Audit** | 🌐 **IP Configuration** | `ip a` | Verify local network interfaces and active assigned IP addresses. | Confirmed local interfaces `10.0.0.2` and `10.0.2.3` on `eth0`. |
+| **2. Connectivity Verification** | 📡 **Gateway Reachability** | `ping -c 4 10.0.0.1` | Test ICMP Echo reachability to the local VirtualBox NAT gateway. | Transmitted 4 packets with 0% loss and instant responses. |
+| **3. Internet & DNS Audit** | 🌍 **DNS Resolution** | `nslookup google.com` | Verify external internet connectivity and active DNS lookup functionality. | Domain successfully resolved public IP addresses via upstream DNS. |
+| **4. Tool Environment Check** | 🧰 **Nmap Utility** | `nmap --version` | Confirm Nmap security scanning suite is installed and operational. | Nmap v7.99 verified and active on Kali Linux environment. |
+| **5. Network Reconnaissance** | 🔎 **Nmap Ping Sweep** | `nmap -sn 10.0.0.0/24` | Discover live active hosts across the local NAT network subnet. | Identified active gateway (`10.0.0.1`) and local system interfaces. |
+| **6. Port Scanning** | 🚪 **Service Detection** | `nmap -sV 127.0.0.1` | Probe default TCP ports to detect running services and version details. | Scanned 1,000 standard ports; confirmed no exposed services. |
+| **7. Vulnerability Assessment** | 🛡️ **Nmap Engine (NSE)** | `nmap --script vuln 127.0.0.1` | Run automated CVE vulnerability checks against local interface services. | Completed scan in 0.18s; confirmed zero unpatched vulnerabilities. |
+| **8. Packet Analysis** | 📊 **ICMP Transmission** | `ping -c 4 127.0.0.1` | Analyze local loopback packet delivery, round-trip time, and latency. | Transmitted 4 packets with 0% packet loss and `<0.1ms` latency. |
+| **9. Penetration Testing** | 🔒 **Nmap Audit** | `nmap -Pn -sV 127.0.0.1` | Perform baseline host security audit overriding ICMP host discovery. | Verified local interface security posture is fully hardened. |
+| **10. Environment Restoration** | 🔄 **Snapshot Verification** | `ip a` | Confirm system baseline state persistence after restoring VM snapshot. | Baseline network configuration successfully restored and verified. |
 
 ---
 
