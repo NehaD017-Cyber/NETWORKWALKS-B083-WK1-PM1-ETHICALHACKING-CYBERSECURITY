@@ -8,12 +8,12 @@ Hands-on Cybersecurity lab using Virtual box and Kali Linux to practice ethical 
 ![Cybersecurity](https://img.shields.io/badge/Skill-Cybersecurity-red?style=for-the-badge)
 ![VirtualBox](https://img.shields.io/badge/Ver-VirtualBox_v7.2-blue?style=for-the-badge)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-v2026.2-orange?style=for-the-badge&logo=kalilinux&logoColor=white)
-![Linux](https://img.shields.io/badge/Skill-Linux-red?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Skill-Linux-purple?style=for-the-badge)
 ![Network](https://img.shields.io/badge/Network-10.0.0.0%2F24-teal?style=for-the-badge)
-![Penetration Testing](https://img.shields.io/badge/Penetration_Testing-red?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Penetration Testing](https://img.shields.io/badge/Penetration_Testing-red?style=for-the-badge&logo=kalilinux&logoColor=brown)
 ![Virtualization](https://img.shields.io/badge/Skill-Virtualization-red?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)
-![NetworkWalks](https://img.shields.io/badge/NetworkWalks-grey?style=for-the-badge)
+![NetworkWalks](https://img.shields.io/badge/NetworkWalks-yellow?style=for-the-badge)
 ![Ethical Hacking](https://img.shields.io/badge/Ethical_Hacking-orange?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![NEHA](https://img.shields.io/badge/NEHA-Certification-red?style=for-the-badge)
 ![Nmap](https://img.shields.io/badge/Nmap-blue?style=for-the-badge)   
@@ -24,6 +24,7 @@ Isolated virtual lab environment built with VirtualBox and Kali Linux for cybers
 
 ## 📌 Project Overview
 This project emphasizes setting up a virtual lab environment setup using virtual box and Kali Linux to practicing penetration testing, ethical hacking and cybersecurity concepts.
+
 The primary aim of this project is to create a secure and isolated setup where cybersecurity tools, vulnerability assessments, and network security analysis, reconnaissance, and other security testing can be performed safely within authorized boundaries.
  
 ---
@@ -69,7 +70,7 @@ The primary aim of this project is to create a secure and isolated setup where c
    
 <img width="638" height="377" alt="Screenshot 2026-09-07 211938" src="https://github.com/user-attachments/assets/6635b33c-13eb-48cf-aa10-b57c84f25491" />
 
-4. **Deploy Kali Linux**
+4. **Install Kali Linux**
 
    Import the Kali Linux ISO/OVA into VirtualBox.
    
@@ -136,20 +137,9 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 | 🌐 Check IP address | `ip a` | Correct Kali IP displayed |
 | 📡 Test gateway | `ping 10.0.0.1` | Successful replies |
 | 🌍 Test Internet connectivity | `ping 8.8.8.8` | Successful replies |
-| 🔎 Test DNS resolution | `nslookup networkwalks.com` | Domain resolves |
+| 🔎 Test DNS resolution | `nslookup google.com` | Domain resolves |
 | 🧰 Verify Nmap | `nmap --version` | Nmap version displayed |
 | 🔄 Verify snapshot | Restore snapshot and run `ip a` | Baseline configuration restored |
-
-**Example Results:**
-
-IP Address:
-10.0.0.2/24
-
-Gateway:
-10.0.0.1
-
-DNS:
-8.8.8.8
 
 ## 🐞 One Problems Encountered & Solved
 
@@ -160,12 +150,12 @@ DNS:
 
 **Problem2:** How to take screenshot in Kali Linux?
 
-**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the                     screenshot in the folder.
+**Solution:** Open the screenshot file from applications in Kali Linux, select the region or full window, click OK and get the screenshot in the folder.
 
 
 **Problem3:** How to bring the screenshot in your PC file explorer?
 
-**Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after               uploading it click on the share button and get the screenshot by the link or email.
+**Solution:** Open the snapdrop.net in the Firefox drag the screenshot from Kali Linux open folder to the upload files option, after uploading it click on the share button and get the screenshot by the link or email.
 
 ## 📝 What I Learned
 
@@ -191,6 +181,8 @@ DNS:
 
 ## 🔐 Security & Ethical Issue
    This laboratory is completely for educational purpose only.
+
+   No target-specific credentials, confidential information, patient records, private infrastructure details, or sensitive assessment evidence are included in this repository.
 
 ## 🔭 Tools and Resources
   1. To install 7-Zip: https://7-zip.org/download.html
