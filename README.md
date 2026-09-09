@@ -24,7 +24,7 @@ Isolated virtual lab environment built with VirtualBox and Kali Linux for cybers
 # Network Reconnaissance & Ethical Hacking Lab (B083-WK1-PM1)
 
 ## Executive Summary
-This project demonstrates end-to-end network reconnaissance and vulnerability assessments using Kali Linux and Nmap within an authorized testing environment.
+I completed this project to demonstrate a complete, end-to-end network reconnaissance and vulnerability assessment methodology within an authorized testing environment. By leveraging Kali Linux and Nmap, I established verified host discovery, mapped active network interfaces, and conducted thorough security audits to evaluate potential system vulnerabilities safely within an isolated virtual lab.
 
 ---
 
