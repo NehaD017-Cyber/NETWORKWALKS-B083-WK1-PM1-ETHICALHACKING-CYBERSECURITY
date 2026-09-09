@@ -10,13 +10,12 @@ Hands-on Cybersecurity lab using Virtual box and Kali Linux to practice ethical 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-v2026.2-orange?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Linux](https://img.shields.io/badge/Skill-Linux-purple?style=for-the-badge)
 ![Network](https://img.shields.io/badge/Network-10.0.0.0%2F24-teal?style=for-the-badge)
-![Penetration Testing](https://img.shields.io/badge/Penetration_Testing-red?style=for-the-badge&logo=kalilinux&logoColor=brown)
-![Virtualization](https://img.shields.io/badge/Skill-Virtualization-red?style=for-the-badge)
+![Penetration Testing](https://img.shields.io/badge/Penetration_Testing-maroon?style=for-the-badge&logo=kalilinux&logoColor=brown)
+![Virtualization](https://img.shields.io/badge/Skill-Virtualization-teal?style=for-the-badge)
 ![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)
 ![NetworkWalks](https://img.shields.io/badge/NetworkWalks-yellow?style=for-the-badge)
-![Ethical Hacking](https://img.shields.io/badge/Ethical_Hacking-orange?style=for-the-badge&logo=kalilinux&logoColor=white)
-![NEHA](https://img.shields.io/badge/NEHA-Certification-red?style=for-the-badge)
-![Nmap](https://img.shields.io/badge/Nmap-blue?style=for-the-badge)   
+![Ethical Hacking](https://img.shields.io/badge/Ethical_Hacking-orange?style=for-the-badge&logo=kalilinux&logoColor=crimson)
+![Nmap](https://img.shields.io/badge/Nmap-green?style=for-the-badge)   
 
 Isolated virtual lab environment built with VirtualBox and Kali Linux for cybersecurity testing, penetration testing, and ethical hacking practice.
 
