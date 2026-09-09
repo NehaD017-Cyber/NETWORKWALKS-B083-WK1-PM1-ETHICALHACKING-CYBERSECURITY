@@ -3,7 +3,7 @@ Hands-on Cybersecurity lab using Virtual box and Kali Linux to practice ethical 
 
 # 🔒 Cybersecurity Lab Environment Setup
 
-### Building an isolated virtual lab for penetration testing and ethical hacking practice
+### Building an isolated virtual lab for penetration testing and ethical hacking practice.
 
 ![Cybersecurity](https://img.shields.io/badge/Skill-Cybersecurity-red?style=for-the-badge)
 ![VirtualBox](https://img.shields.io/badge/Ver-VirtualBox_v7.2-blue?style=for-the-badge)
@@ -21,6 +21,26 @@ Isolated virtual lab environment built with VirtualBox and Kali Linux for cybers
 
 ---
 
+# Network Reconnaissance & Ethical Hacking Lab (B083-WK1-PM1)
+
+## Executive Summary
+This project demonstrates end-to-end network reconnaissance and vulnerability assessments using Kali Linux and Nmap within an authorized testing environment.
+
+## Lab Architecture & Topology
+- **Attacker Machine:** Kali Linux 2026.x
+- **Target Network:** 192.168.x.x / Host-Only Isolated Network
+- **Tools Used:** Nmap, Wireshark, Bash
+
+## Phase 1: Network Reconnaissance & Commands Executed
+```bash
+# Host Discovery
+nmap -sn 10.0.2.0/24
+
+# Detailed Service & OS Scanning
+nmap -sV -sC -O -p- 10.0.2.0
+```
+---
+
 ## 📌 Project Overview
 This project emphasizes setting up a virtual lab environment setup using virtual box and Kali Linux to practicing penetration testing, ethical hacking and cybersecurity concepts.
 
@@ -35,6 +55,7 @@ The primary aim of this project is to create a secure and isolated setup where c
 * Set NAT Network in the Kali Linux.
 * Assign a consistent IP address to the Kali VM.
 * Verify network connectivity and DNS resolution.
+* Perform Network Reconnaissance (Nmaps scans + Terminal proofs)
 * Take snapshot to recover if needed.
 * Document the complete setup and prepare the environment for future tasks.
 ---
@@ -118,7 +139,28 @@ Adapter Type: Intel PRO/1000 MT Desktop
 
   Verifying Results: Both 8.8.8.8 (gateway) and ```google.com``` (DNS) successfully returned 0% packet loss, confirming full outbound network connectivity.
   
-7. **Create a Clean VM Snapshot**
+7. **Perform Network Reconnaissance**
+ Executed Nmap reconnaissance inside the isolated lab environment in the terminal of kali linux:
+
+```bash
+# Basic Ping Sweep / Target Discovery
+nmap -sn 192.168.x.x/24
+
+# Service & Version Scan
+nmap -sV 192.168.x.x
+```
+<img width="488" height="229" alt="Screenshot 2026-09-09 133050" src="https://github.com/user-attachments/assets/2ff422ba-17fe-48c6-ad34-2cd049af9267" />
+
+#### Terminal Proof of Execution
+
+![Nmap Scan Terminal Output](images/nmap-proof.jpg)
+
+**Analysis of Execution Results:**
+- **Host Discovery (`nmap -sn 10.0.2.0/24`):** Successfully discovered 3 active hosts on the subnet (`10.0.2.1`, `10.0.2.2`, and `10.0.2.3`).
+  
+- **Service Scanning (`nmap -sV 10.0.2.0`):** Demonstrated that network subnet IDs (`.0`) do not respond to direct service scans, confirming active host IP selection is required for targeted enumeration.
+
+8. **Create a Clean VM Snapshot**
 
 After completing the initial network configuration and verification, a baseline VirtualBox snapshot was created.
 
@@ -145,7 +187,7 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 
 ---
 
-## 🐞 One Problems Encountered & Solved
+## 🐞 Problems Encountered & Solved
 
 **Problem1:** Do we have to enable IPv6 while attacking the Virtual Boc to NAT Network?
 
@@ -176,6 +218,10 @@ If a future exercise changes system files, breaks networking, or degrades the VM
 - **Screenshots in Virtual Machine:**
     
   I was stuck for too long in this, but now I know how to take screenshots in VM.
+
+- **Network Recoinnassance:**
+
+  Understood why detailed service scans (nmap -sV) must target specific individual host IP addresses (10.0.2.2, 10.0.2.3) rather than the subnet ID (10.0.2.0), which causes Nmap to report the host as down.
 
 - **Snapshots:**
   
